@@ -1,0 +1,22 @@
+<!-- <p>points-table works!</p> -->
+<!-- {{points | json}} -->
+<h1 style="margin: 20px;">Points Table</h1>
+
+<div >
+  <table class="table table-bordered table-striped" style="text-align: center;margin: 5px 20px;">
+   <tr style="background-color: black;color: aliceblue;" >
+    <th *ngFor="let head of tableHeading">
+
+      {{head}}</th>
+   </tr>
+   <tbody>
+      <tr *ngFor="let items of points;let i=index;">
+        <ng-container *ngIf="i>0">
+        <td *ngFor="let item of items">
+           {{item}}
+        </td>
+      </ng-container>
+      </tr>
+   </tbody>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<h1 style="margin: 20px;">Live Cricket Score</h1>
+
+<!-- <div>{{liveMat | json}}</div> -->
+<div class="card-container" id="cont">
+
+ <div *ngFor="let match of liveMat">
+    <div class="m-2" style="">
+        <div class="card border rounded-xl shadow-lg p-3" style="height: 280px;border-radius: 12px;">
+          <div class="header border-bottom" style="border-color: gray;padding: 5px 0px;">
+            <p style="font-weight: bold;">{{match.teamHeading}}</p>
+            {{match.matchNumberVenue}}
+          </div>
+          <div class="body mt-4" style="font-weight: bold;">
+            <div class="" style="display: flex;justify-content: space-between;margin: 0px 100px 0px 5px;">
+              <p>{{match.battingTeam}}</p>
+              <p>{{match.battingTeamScore}}</p>
+            </div>
+            <div style="display: flex;justify-content: space-between;margin: 0px 100px 0px 5px;">
+              <p>{{match.bowlTeam}}</p>
+              <p>{{match.bowlTeamScore}}</p>
+            </div>
+          </div>
+          <div class="footer" style="color: red;">
+            {{match.liveText}}
+          </div>
+        </div>
+    </div>
+ </div>
+  <!-- @empty {
+    there is no match
+  } -->
+
+</div>
